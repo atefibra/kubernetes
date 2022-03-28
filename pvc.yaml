@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: crowdfunding-be-springboot
+  namespace: start-u
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: prx-nfs-client
+  volumeMode: Filesystem
+  volumeName: pvc-83bbfafb-4f91-4aaa-9b23-579b42efc42b
