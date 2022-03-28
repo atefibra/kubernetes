@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: adib-bo
+ namespace: ns-prx-3
+spec:
+ ingressClassName: nginx-dev
+ rules:
+   - host: adib-poc-bo.dev5.proxym-it.tn
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: adib-bo-dev-springboot
+             port:
+               number: 8080
+

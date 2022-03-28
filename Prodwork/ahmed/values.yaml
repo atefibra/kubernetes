@@ -1,0 +1,7 @@
+#USER-SUPPLIED VALUES:
+configInline:
+  address-pools:
+  - addresses:
+    - 172.16.110.1-172.16.110.100
+    name: default
+    protocol: layer2

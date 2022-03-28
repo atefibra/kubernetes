@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    meta.helm.sh/release-name: adib-front-qa
+    meta.helm.sh/release-namespace: ns-prx-6
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: adib-front-qa
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: angular
+    app.kubernetes.io/version: "1.0"
+    helm.sh/chart: angular-0.3.1
+  name: adib-front-qa-https
+  namespace: ns-prx-6
+spec:
+  ingressClassName: nginx-qa
+  rules:
+  - host: takka.qa.proxym-it.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: adib-front-qa
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer:
+    ingress:
+    - ip: 172.16.110.3

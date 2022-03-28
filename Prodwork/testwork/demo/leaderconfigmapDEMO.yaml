@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"nginx-demo-nginx-ingress-c766bcb48-xt8cf","leaseDurationSeconds":30,"acquireTime":"2021-07-01T10:42:44Z","renewTime":"2021-09-07T17:32:27Z","leaderTransitions":1}'
+    meta.helm.sh/release-name: nginx-demo
+    meta.helm.sh/release-namespace: nginx-ingress
+  labels:
+    app.kubernetes.io/instance: nginx-demo
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-demo-nginx-ingress
+    helm.sh/chart: nginx-ingress-0.9.3
+  name: nginx-demo-nginx-ingress-leader-election
+  namespace: nginx-ingress

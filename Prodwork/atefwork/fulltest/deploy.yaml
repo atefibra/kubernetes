@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crowdfunding-be-springboot
+  namespace: start-u
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: crowdfunding-be
+      app.kubernetes.io/name: springboot
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: crowdfunding-be
+        app.kubernetes.io/name: springboot
+    spec:
+      containers:
+        - envFrom:
+            - configMapRef:
+                name: crowdfunding-be-springboot
+          image: >-
+            gitlab-registry.proxym-group.net/startu-20/crowdfunding/be-crowdfunding:latest
+          imagePullPolicy: Always
+          name: springboot
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
+          resources: {}
+          volumeMounts:
+            - mountPath: /data
+              name: springboot-data
+              subPath: data
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: gitlab-auth
+      restartPolicy: Always
+      volumes:
+        - name: springboot-data
+          persistentVolumeClaim:
+            claimName: crowdfunding-be-springboot

@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  SERVER_PORT: '80'
+  SPRING_DATASOURCE_PASSWORD: crowdfundingbd
+  SPRING_DATASOURCE_URL: 'jdbc:postgresql://172.16.100.74:5432/crowdfundingbd'
+  SPRING_DATASOURCE_USERNAME: crowdfundingbd
+  SPRING_JPA_HIBERNATE_DDL-AUTO: update
+kind: ConfigMap
+metadata:
+  name: crowdfunding-be-springboot
+  namespace: start-z

@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  MYSQL_ROOT_PASSWORD: my-secret-pw
+kind: ConfigMap
+metadata:
+  name: test-db
+  namespace: brh
+

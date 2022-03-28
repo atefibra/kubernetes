@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: IngressClass
+metadata:
+  annotations:
+    meta.helm.sh/release-name: nginx-demo
+    meta.helm.sh/release-namespace: nginx-ingress
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: nginx-demo
+spec:
+  controller: nginx.org/ingress-controller
+

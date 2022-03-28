@@ -1,0 +1,53 @@
+USER-SUPPLIED VALUES:
+affinity: {}
+checkInterval: 30
+concurrent: 30
+configMaps: {}
+gitlabUrl: https://gitlab.proxym-group.net/
+hostAliases: []
+imagePullPolicy: IfNotPresent
+metrics:
+  enabled: false
+nodeSelector:
+  kubernetes.io/hostname: kbsw3
+podAnnotations: {}
+podLabels: {}
+rbac:
+  clusterWideAccess: false
+  create: false
+  podSecurityPolicy:
+    enabled: false
+    resourceNames:
+    - gitlab-runner
+  rules: []
+resources: {}
+runnerRegistrationToken: ioQpcWLULAx_rMQ-S7Kb
+runners:
+  builds: {}
+  cache:
+    cachePath: albaraka/
+    cacheShared: true
+    cacheType: s3
+    s3BucketName: project-artifacts
+    s3CacheInsecure: true
+    s3ServerAddress: 172.16.110.8:9000
+    secretName: s3access
+  config: |
+    [[runners]]
+      [runners.kubernetes]
+        image = "ubuntu:18.04"
+  helpers: {}
+  image: ubuntu:18.04
+  imagePullPolicy: if-not-present
+  namespace: gitlab-runner
+  nodeSelector:
+    kubernetes.io/hostname: kbsw3
+  privileged: true
+  services: {}
+  tags: albaraka-runner
+secrets: []
+securityContext:
+  fsGroup: 65533
+  runAsUser: 100
+terminationGracePeriodSeconds: 3600
+tolerations: []

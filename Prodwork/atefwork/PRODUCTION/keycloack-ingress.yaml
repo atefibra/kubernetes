@@ -1,0 +1,21 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: keycloak
+  namespace: ns-prx-10
+  annotations:
+    nginx.ingress.kubernetes.io/client-max-body-size: '0'
+    nginx.ingress.kubernetes.io/proxy-body-size: '0'
+spec:
+  ingressClassName: nginx-demo
+  rules:
+    - host: keycloak.demo.proxym-it.tn
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: keycloak
+                port:
+                  number: 8080

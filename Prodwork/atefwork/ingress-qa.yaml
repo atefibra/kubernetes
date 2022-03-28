@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-qa
+  namespace: ingress-nginx
+spec:
+  ingressClassName: nginx-qa
+  rules:
+  - host: test.qa5.proxym-it.tn
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app-qa
+            port:
+              number: 80

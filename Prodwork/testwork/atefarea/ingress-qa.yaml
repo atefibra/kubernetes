@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+  name: ingress-nginx-qa
+  namespace: ingress-nginx
+spec:
+  ports:
+  - name: http
+    nodePort: 31436
+    port: 80
+    protocol: TCP
+    targetPort: http
+  - name: https
+    nodePort: 32510
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 172.16.10.225

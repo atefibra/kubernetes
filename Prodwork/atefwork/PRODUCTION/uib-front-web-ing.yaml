@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    component: uib-web-front-digicredit
+    environment: digicredit
+    project: uib
+  name: uib-web-front-digicredit
+  namespace: ns-prx-7
+spec:
+  ingressClassName: nginx-dev
+  rules:
+  - host: web.uib.digicredit.dev.proxym-it.tn
+    http:
+      paths:
+      - backend:
+          service:
+            name: uib-web-front-digicredit
+            port:
+              number: 80
+        path: /
+        pathType: Prefix

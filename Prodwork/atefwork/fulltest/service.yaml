@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: crowdfunding-be-springboot
+  namespace: start-u
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app.kubernetes.io/instance: crowdfunding-be
+    app.kubernetes.io/name: springboot

@@ -1,0 +1,56 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flowable-cao
+  namespace: ns-prx-10
+spec:
+  ingressClassName: nginx-dev
+  rules:
+    - host: flowable-cao.dev.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service:
+                name: flowable-cao
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flowable-prod
+  namespace: ns-prx-10
+spec:
+  ingressClassName: nginx-demo
+  rules:
+    - host: bpm.demo.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service: 
+                name: flowable-prod
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flowable-ui
+  namespace: ns-prx-10
+spec:
+  ingressClassName: nginx-dev
+  rules:
+    - host: flowable-ui.dev.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service: 
+                name: flowable-ui
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix

@@ -1,0 +1,25 @@
+apiVersion:  networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app.kubernetes.io/instance: injazat-vcp-front-dev
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: angular
+    app.kubernetes.io/version: "1.0"
+    helm.sh/chart: angular-0.3.0
+  name: injazat-vcp-front-dev
+  namespace: ns-prx-5
+spec:
+  ingressClassName: nginx-dev
+  rules:
+  - host: injazat-vcp.dev.proxym-it.tn
+    http:
+      paths:
+      - backend:
+          service:
+            name: injazat-vcp-front-dev
+            port:
+               number: 80
+        path: /
+        pathType: Prefix
+

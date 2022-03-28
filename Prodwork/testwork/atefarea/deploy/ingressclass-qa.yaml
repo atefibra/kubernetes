@@ -1,0 +1,9 @@
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: nginx-qa
+spec:
+  controller: nginx.org/ingress-controller
+

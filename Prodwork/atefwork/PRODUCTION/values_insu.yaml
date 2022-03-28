@@ -1,0 +1,11 @@
+image:
+  repository: gitlab-registry.proxym-group.net/bh-assurances/solution_omnicanal/omnicanal_front/omnicanal_front
+  tag: insurise-demo
+ingress:
+  host: insurise-front.demo.proxym-it.net
+name:
+  configmap: insurise-front-insurise-demo
+  deployment: insurise-front-insurise-demo
+  ingress: insurise-front-insurise-demo
+  service: insurise-front-insurise-demo
+

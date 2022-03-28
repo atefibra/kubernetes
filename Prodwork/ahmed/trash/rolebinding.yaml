@@ -1,0 +1,19 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"name":"read-pods","namespace":"ns-prx-1"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"secret-reader"},"subjects":[{"apiGroup":"rbac.authorization.k8s.io","kind":"User","name":"https://auth.proxym-group.net/auth/realms/proxym-group#ahmed.belghith"}]}
+  creationTimestamp: "2022-02-23T20:05:35Z"
+  name: read-pods
+  namespace: ns-prx-1
+  resourceVersion: "13377330"
+  uid: 3ab4f11c-5332-4470-a6ab-226f702bc79a
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: secret-reader
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: https://auth.proxym-group.net/auth/realms/proxym-group#ahmed.belghith

@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-demo
+  namespace: ingress-nginx
+#  annotations:
+ #  kubernetes.io/ingress.class: nginx-dev
+spec:
+  ingressClassName: nginx-demo
+#  defaultBackend:
+ #   service:
+  #    name: my-dev
+   #   port:
+    #    number: 80
+  rules:
+  - host: test.demo5.proxym-it.tn
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app-demo
+            port:
+              number: 80

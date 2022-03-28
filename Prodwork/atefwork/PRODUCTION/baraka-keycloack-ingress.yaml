@@ -1,0 +1,87 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/client-max-body-size: '0'
+    nginx.ingress.kubernetes.io/proxy-body-size: '0'
+  name: keycloak
+  namespace: ns-prx-8
+spec:
+  ingressClassName: nginx-dev
+  rules:
+    - host: auth.albaraka.dev.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service:
+                name: keycloak
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/client-max-body-size: '0'
+    nginx.ingress.kubernetes.io/proxy-body-size: '0'
+  name: keycloak-adib
+  namespace: ns-prx-8
+spec:
+  ingressClassName: nginx-demo
+  rules:
+    - host: auth.adib.demo.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service:
+                name: keycloak
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/client-max-body-size: '0'
+    nginx.ingress.kubernetes.io/proxy-body-size: '0'
+  name: keycloak-home-finance
+  namespace: ns-prx-8
+spec:
+  ingressClassName: nginx-demo
+  rules:
+    - host: auth.home-finance.demo.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service:
+                name: keycloak
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/client-max-body-size: '0'
+    nginx.ingress.kubernetes.io/proxy-body-size: '0'
+  name: keycloak-qiib
+  namespace: ns-prx-8
+spec:
+  ingressClassName: nginx-dev
+  rules:
+    - host: auth.qiib.dev.proxym-it.tn
+      http:
+        paths:
+          - backend:
+              service:
+                name: keycloak
+                port: 
+                  number: 8080
+            path: /
+            pathType: Prefix

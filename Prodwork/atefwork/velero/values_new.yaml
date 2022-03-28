@@ -1,0 +1,132 @@
+affinity: {}
+annotations: {}
+backupsEnabled: true
+cleanUpCRDs: false
+configMaps: {}
+configuration:
+  backupStorageLocation:
+    bucket: dev-test
+    caCert: null
+    config:
+      region: US-East
+      s3ForcePathStyle: true
+      s3Url: http://172.16.200.4:9000
+    default: null
+    name: null
+    prefix: null
+    provider: aws
+  backupSyncPeriod: null
+  clientBurst: null
+  clientQPS: null
+  defaultResticPruneFrequency: null
+  defaultVolumesToRestic: null
+  disableControllers: null
+  extraEnvVars: {}
+  features: null
+  logFormat: null
+  logLevel: null
+  provider: aws
+  resticTimeout: null
+  restoreOnlyMode: null
+  restoreResourcePriorities: null
+  volumeSnapshotLocation:
+    config:
+      region: US-East
+    name: null
+    provider: aws
+containerSecurityContext: {}
+credentials:
+  extraEnvVars: {}
+  extraSecretRef: ""
+  name: minio-credentials
+  secretContents:
+    cloud: |
+      [default]
+      aws_access_key_id = admin-prx
+      aws_secret_access_key = Pr0xym-1T
+  useSecret: true
+deployRestic: true
+dnsPolicy: ClusterFirst
+extraVolumeMounts: []
+extraVolumes: []
+image:
+  imagePullSecrets: []
+  pullPolicy: IfNotPresent
+  repository: velero/velero
+  tag: v1.7.1
+initContainers:
+- image: velero/velero-plugin-for-aws:v1.3.0
+  imagePullPolicy: IfNotPresent
+  name: velero-plugin-for-aws
+  volumeMounts:
+  - mountPath: /target
+    name: plugins
+kubectl:
+  annotations: {}
+  image:
+    repository: docker.io/bitnami/kubectl
+  labels: {}
+  resources: {}
+labels: {}
+metrics:
+  enabled: false
+  podAnnotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8085"
+    prometheus.io/scrape: "true"
+  scrapeInterval: 30s
+  scrapeTimeout: 10s
+  service:
+    annotations: {}
+    labels: {}
+  serviceMonitor:
+    additionalLabels: {}
+    enabled: false
+nodeSelector: {}
+podAnnotations: {}
+podLabels: {}
+podSecurityContext: {}
+priorityClassName: ""
+rbac:
+  clusterAdministrator: true
+  create: true
+resources:
+  limits:
+    cpu: 1000m
+    memory: 512Mi
+  requests:
+    cpu: 500m
+    memory: 128Mi
+restic:
+  annotations: {}
+  containerSecurityContext: {}
+  dnsPolicy: ClusterFirst
+  extraVolumeMounts: []
+  extraVolumes: []
+  labels: {}
+  nodeSelector: {}
+  podSecurityContext:
+    runAsUser: 0
+  podVolumePath: /var/lib/kubelet/pods
+  priorityClassName: ""
+  privileged: false
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1024Mi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+  tolerations: []
+  useScratchEmptyDir: true
+schedules: {}
+serviceAccount:
+  server:
+    annotations: null
+    create: true
+    labels: null
+    name: null
+snapshotsEnabled: true
+tolerations: []
+upgradeCRDs: true
+

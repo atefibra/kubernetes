@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: insurise-front-insurise-demo
+  namespace: ns-prx-6
+spec:
+  ingressClassName: nginx-demo
+  rules:
+  - host: insurise-front.demo.proxym-it.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: insurise-front-insurise-demo
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+

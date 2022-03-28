@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+  name: test-db1
+spec:
+  containers:
+  - image: mysql:latest
+    name: test-db1
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: my-secret-pw
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       valueFrom:
+        configMapKeyRef:
+         name: test-db
+         key: MYSQL_ROOT_PASSWORD
+    envFrom:
+     - configMapRef:
+        name: test-db

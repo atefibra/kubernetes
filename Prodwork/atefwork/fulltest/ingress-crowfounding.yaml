@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: crowfounding
+ namespace: ingress-nginx
+spec:
+ ingressClassName: nginx-demo
+ rules:
+   - host: crowfunding.demo5.proxym-it.tn
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: crowdfunding-be-springboot
+             port:
+               number: 80
+

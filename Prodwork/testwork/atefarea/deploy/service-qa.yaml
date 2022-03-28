@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: nginx-qa
+    meta.helm.sh/release-namespace: nginx-ingress
+  labels:
+    app.kubernetes.io/instance: nginx-qa
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-qa-nginx-ingress
+    helm.sh/chart: nginx-ingress-0.9.3
+  name: nginx-qa-nginx-ingress
+  namespace: nginx-ingress
+spec:
+  ports:
+  - name: http
+    nodePort: 32188
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    nodePort: 30741
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: nginx-qa-nginx-ingress
+  sessionAffinity: None
+  type: LoadBalancer
+

@@ -1,0 +1,20 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    meta.helm.sh/release-name: nginx-qa
+    meta.helm.sh/release-namespace: nginx-ingress
+  labels:
+    app.kubernetes.io/instance: nginx-qa
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-qa-nginx-ingress
+    helm.sh/chart: nginx-ingress-0.9.3
+  name: nginx-qa-nginx-ingress
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: nginx-qa-nginx-ingress
+subjects:
+- kind: ServiceAccount
+  name: nginx-qa-nginx-ingress
+  namespace: nginx-ingress

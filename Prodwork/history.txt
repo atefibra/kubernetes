@@ -1,0 +1,1000 @@
+   11  helm delete -n ns-prx-5 injazat-vcp-malaffi-be-demo injazat-vcp-malaffi-be-dev
+   12  kubectl delete deployments.apps -n ns-prx-5 injazat-vcp-malaffi-be-dev injazat-vcp-malaffi-be-demo
+   13  kubectl get deployments.apps -n ns-prx-5 
+   14  kubectl delete deployments.apps -n ns-prx-5 injazat-vcp-malaffi-be-demo-springboot injazat-vcp-malaffi-be-dev-springboot 
+   15  kubectl delete svc -n ns-prx-5 injazat-vcp-malaffi-be-demo-springboot injazat-vcp-malaffi-be-dev-springboot 
+   16  kubectl get ingress -n ns-prx-5
+   17  helm list -n ns-prx-5
+   18  kubectl get ingress -n ns-prx-5 
+   19  helm list -n ns-prx-5
+   20  helm list injazat-vcp-malaffi-be-dev -n ns-prx-5
+   21  helm delete injazat-vcp-malaffi-be-dev -n ns-prx-5
+   22  kubectl get ingress -n ns-prx-5 
+   23  helm list -n ns-prx-7
+   24  helm delete -n ns-prx-
+   25  helm delete -n ns-prx-7 barwa-corp-front-dev barwa-corp-front-qa
+   26  kubectl get deployments.apps -n ns-prx-7 
+   27  kubectl delete -n ns-prx-7 barwa-corp-front-dev barwa-corp-front-qa
+   28  kubectl get deployments.apps -n ns-prx-7 
+   29  kubectl delete -n ns-prx-7 deployments.apps barwa-corp-front-qa barwa-corp-front-dev
+   30  kubectl delete -n ns-prx-7 services barwa-corp-front-qa barwa-corp-front-dev
+   31  kubectl get ing -n ns-prx-7
+   32  helm repo update
+   33  kubectl get deployments.apps -n ns-prx-9
+   34  kubectl get deployments.apps -n ns-prx-8
+   35  kubectl get configmap -n ns-prx-8
+   36  kubectl get configmaps -n ns-prx-7
+   37  kubectl get configmaps -n ns-prx-7 | grep barwa-corp-front-dev
+   38  kubectl get configmaps -n ns-prx-8
+   39  kubectl edit configmaps -n ns-prx-7 albaraka-front-dev
+   40  kubectl edit configmaps -n ns-prx-8 albaraka-front-dev
+   41  kubectl get configmaps --all-namespaces | grep nginx-config-volume
+   42  kubectl get all -n ns-prx-7
+   43  kubectl get deploy -n ns-prx-7
+   44  kubectl get deploy -n ns-prx-8
+   45  kubectl edit deploy albaraka-front-dev -n ns-prx-8
+   46  kubectl edit configmaps -n ns-prx-8 albaraka-front-dev
+   47  kubectl get configmaps -n ns-prx-7 
+   48  helm list -n ns-prx-7
+   49  helm list -n ns-prx-6
+   50  helm list -n ns-prx-7
+   51  helm list -n ns-prx-6
+   52  kubectl get deploy -n ns-prx-8
+   53  kubectl edit configmaps -n ns-prx-8 albaraka-front-dev
+   54  kubectl edit configmaps -n ns-prx-7 barwa-corp-front-dev
+   55  sudo nano cfmap-barwa.yaml
+   56  kubectl apply -f cfmap-barwa.yaml 
+   57  kubectl get configmaps -n ns-prx-7 
+   58  kubectl edit deploy albaraka-front-dev -n ns-prx-8
+   59  kubectl get pvc -n ns-prx-8
+   60  kubectl get pv -n ns-prx-8
+   61  kubectl get pv | grep ns-prx-8
+   62  helm list -n ns-prx-6
+   63  helm delete -n ns-prx-6  insurise-front-insurise-demo
+   64  kubectl delete deploy -n ns-prx-6 insurise-front-insurise-demo
+   65  kubectl delete svc -n ns-prx-6 insurise-front-insurise-demo
+   66  ls
+   67  cat atefwork/PRODUCTION/baraka-keycloack-ingress.yaml 
+   68  ls
+   69  cd atefwork/PRODUCTION/
+   70  ls
+   71  sudo nano insurise-ing.yaml
+   72  kubectl apply -f insurise-ing.yaml 
+   73  sudo nano insurise-ing.yaml
+   74  kubectl apply -f insurise-ing.yaml 
+   75  cat atefwork/PRODUCTION/baraka-keycloack-ingress.yaml 
+   76  ls
+   77  cat farmer-dev-ing.yaml 
+   78  sudo nano insurise-ing.yaml
+   79  kubectl apply -f insurise-ing.yaml 
+   80  kubectl get ing -n ns-prx-6 
+   81  ls
+   82  sudo nano values_insu.yaml
+   83  kubectl get ing -n ns-prx-7
+   84  kubectl get clusterrolebindign
+   85  kubectl get clusterrolebinding
+   86  kubectl get clusterrolebinding | grep admin
+   87  kubectl get ing -n ns-prx-7
+   88  kubectl get ing albaraka-api-dev-springboot -n ns-prx-7 -o yaml
+   89  kubectl get ing -n ns-prx-7
+   90  kubectl edit ing albaraka-api-dev-springboot -n ns-prx-7 -o yaml
+   91  kubectl get configmap albaraka-api-dev-springboot -n ns-prx-7 
+   92  kubectl get configmaps albaraka-api-dev-springboot -n ns-prx-7 
+   93  kubectl get configmap albaraka-api-dev-springboot -n ns-prx-7 
+   94  kubectl get configmap  -n ns-prx-7 
+   95  kubectl get configmap barwa-corp-be-dev-springboot  -n ns-prx-7 
+   96  kubectl edit configmap barwa-corp-be-dev-springboot  -n ns-prx-7 
+   97  kubectl get pods   -n ns-prx-7
+   98  kubectl delete pods barwa-corp-be-dev-springboot-cd56f8699-knrf5   -n ns-prx-7
+   99  kubectl get pods   -n ns-prx-7
+  100  kubectl get clusterrolebinding | grep admin
+  101  kubectl get clusterrolebinding admin-cluster-admin
+  102  kubectl get clusterrolebinding admin-cluster-admin -o yaml
+  103  kubectl get clusterrolebinding | grep admin
+  104  kubectl get clusterrolebinding cluster-admin -o yaml
+  105  cd ahmed/
+  106  ls
+  107  nano clusterrolebindingadmin.yaml 
+  108  ll
+  109  nano clusterrolebindingadmin.yaml
+  110  kubectl get clusterrolebinding/clusterrolebinding-tgo-admin 
+  111  kubectl get clusterrolebinding/clusterrolebinding-tgo-admin  -o yaml
+  112  kubectl get ing -n shared-apps
+  113  kubectl get all -n shared-apps
+  114  kubectl get all 
+  115  kubectl get all | grep key
+  116  kubectl get ing -n ns-prx-6
+  117  kubectl get ing -n shared-apps 
+  118  kubectl get ing -n ns-prx-10
+  119  kubectl get pods -n ns-prx-10
+  120  kubectl exec -it keycloak-0 -n ns-prx-10 /bin/bash
+  121  kubectl copy keycloak-0:/opt/bitnami/java/lib/security/cacerts -n ns-prx-10 .
+  122  kubectl copy ns-prx-10/keycloak-0:/opt/bitnami/java/lib/security/cacerts -n .
+  123  kubectl cp ns-prx-10/keycloak-0:/opt/bitnami/java/lib/security/cacerts -n .
+  124  kubectl cp ns-prx-10/keycloak-0:/opt/bitnami/java/lib/security/cacerts .
+  125  kubectl cp ns-prx-10/keycloak-0:opt/bitnami/java/lib/security/cacerts .
+  126  kubectl cp ns-prx-10/keycloak-0:opt/bitnami/java/lib/security/cacerts /home/support/
+  127  kubectl cp ns-prx-10/keycloak-0:opt/bitnami/java/lib/security/cacerts /tmp/
+  128  kubectl cp ns-prx-10/keycloak-0:opt/bitnami/java/lib/security/cacerts /tmp/cacerts
+  129  kubectl exec -it keycloak-0 -n ns-prx-10 /bin/bash
+  130  kubectl get all
+  131  kubectl get pods
+  132  kubectl get namespace
+  133  kubectl get all
+  134  kubectl get pods ?
+  135  kubectl get pods 
+  136  kubectl get service kube-dns -n kube-system
+  137  kubectl get service kube-dns 
+  138  kubectl -n kube-system get endpoints kube-dns
+  139  kubectl get services
+  140  kubectl get services 
+  141  kubectl get services default
+  142  kubectl get services -n namespace
+  143  kubectl get namespace
+  144  kubectl get all -n default
+  145  kubectl get all -n ingress-nginx 
+  146  kubectl get all -n valero
+  147  kubectl get all -n velero velero
+  148  kubectl get all -n velero 
+  149  kubectl get all -n shared-apps 
+  150  kubectl get all -n kube-system 
+  151  kubectl get all -n kube-dns
+  152  kubectl get services 
+  153  kubectl describe pod frontend-cpu 
+  154  kubectl describe pod coredns -n kube-system 
+  155  kubectl los pod coredns -n kube-system 
+  156  kubectl logs pod coredns -n kube-system 
+  157  kubectl logs coredns -n kube-system 
+  158  kubectl logs coredns-8474476ff8-pdgjl -n kube-system 
+  159  *
+  160  kubectl exec -ti dnsutils -- cat /etc/resolv.conf
+  161  kubectl version 
+  162  kubectl logs pod coredns -n kube-system 
+  163  kubectl logs coredns -n kube-system 
+  164  kubectl logs pod coredns -n kube-system 
+  165  kubectl logs coredns-8474476ff8-pdgjl -n kube-system 
+  166  kubectl coredns-8474476ff8-pdgjl -n kube-system 
+  167  kubectl logs coredns-8474476ff8-pdgjl -n kube-system 
+  168  kubectl get pods -n kube-system 
+  169  kubectl describe pod 
+  170  kubectl get events
+  171  kubectl get pods -n kube-system 
+  172  kubectl logs coredns-8474476ff8-5rmwm -n kube-system
+  173  kubectl logs coredns-8474476ff8-p6fj7 -n kube-system
+  174  kubectl logs pods coredns-8474476ff8-p6fj7 -n kube-system
+  175  kubectl logs pods/coredns-8474476ff8-p6fj7 -n kube-system
+  176  kubectl logs pods/76ff8-prfx4                  1/1     Running            6 (3m32s ago)   6m38s -n kube-system
+  177  kubectl logs coredns-8474476ff8-zw5s6 -n kube-system
+  178  kubectl get pods -n kube-system 
+  179  kubectl get events
+  180  telnet 172.16.10.11 7472
+  181  telnet 172.16.10.12 7472
+  182  telnet 172.16.10.13 7472
+  183  kubectl get pods -n kube-system 
+  184  kubectl get events
+  185  kubectl get nodes
+  186  kubectl get events
+  187  kubectl get nodes -o wide
+  188  kubectl get deployment -n kube-system
+  189  kubectl get deployment coredns -n kube-system
+  190  kubectl get deployment coredns -n kube-system -o yaml
+  191  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+  192  kubectl get pods kubernetes.default
+  193  kubectl get pods kube-system
+  194  kubectl get pods -n kube-system
+  195  kubectl exec -i -t  coredns-8474476ff8-dz8ws  -n kube-system
+  196  kubectl exec -i -t dnsutils -- nslookup  coredns-8474476ff8-dz8ws  -n kube-system
+  197  kubectl exec -i -t dnsutils --   coredns-8474476ff8-dz8ws  -n kube-system
+  198  kubectl exec -i -t   coredns-8474476ff8-dz8ws  -n kube-system /bin/bash
+  199  kubectl get pods -n kube-system
+  200  kubectl logs --namespace=kube-system -l k8s-app=kube-dns
+  201  kubectl get pods -n kube-system
+  202  kubectl get configmaps 
+  203  kubectl describe configmaps  
+  204  kubectl get pods -n kube-system 
+  205  kubectl describe coredns-8474476ff8-dz8ws -o wide
+  206  kubectl describe coredns-8474476ff8-dz8ws 
+  207  kubectl describe coredns-8474476ff8-dz8ws  -n kube-system -o wide
+  208  kubectl describe coredns-8474476ff8-dz8ws  -n kube-system 
+  209  kubectl describe pods coredns-8474476ff8-dz8ws  -n kube-system 
+  210  kubectl logs --namespace=kube-system -l k8s-app=kube-dns
+  211  kubectl logs --namespace=kube-system -l 
+  212  kubectl logs --namespace=kube-system
+  213  kubectl get pods -n kube-system 
+  214  kubectl logs --namespace=kube-system -l coredns-8474476ff8-dz8ws
+  215  kubectl logs coredns-8474476ff8-dz8ws  --namespace=kube-system 
+  216  kubectl exec  network-tools -- time dig A google.com @10.96.0.10 +short
+  217   kubectl exec  network-tools -- time dig A google.com
+  218  kubectl logs coredns-8474476ff8-dz8ws  --namespace=kube-system 
+  219  e
+  220  kubectl logs coredns-8474476ff8-dz8ws  --namespace=kube-system 
+  221  nslookup kubernetes.default
+  222  nslookup albaraka-api-dev-springboot.ns-prx-8.svc.cluster.local
+  223  nslookup www
+  224  nslookup www.google.com
+  225  kubectl get ep kube-dns --namespace=kube-system
+  226  dkubectl get svc -n kube-system
+  227  kubectl get svc -n kube-system
+  228  kubectl get ep coredns --namespace=kube-system
+  229  kubectl get pods
+  230  kubectl get pods -n all
+  231  kubectl get pods -n 
+  232  kubectl get namespace
+  233  kubectl get pods -n shared-apps 
+  234  kubectl get pods -n ns-prx-1
+  235  kubectl exec -ti django-app-596b6c5fc5-pn8m4 -- nslookup kubernetes.default
+  236  kubectl exec -ti django-app-596b6c5fc5-pn8m4 -- nslookup kubernetes.default -
+  237  kubectl get pods -n ns-prx-1
+  238  kubectl get pods -n ns-prx-9
+  239  kubectl exec -ti keycloak-0 -- nslookup kubernetes.default
+  240  kubectl exec -ti keycloak-0 -n ns-prx-9 -- nslookup kubernetes.default
+  241  sudo -s
+  242  kubectl get clusterrolebinding 
+  243  kubectl get clusterrolebinding  | grep prx
+  244  kubectl edit clusterrolebinding  cr-prx-1 
+  245  kubectl edit clusterrolebinding  clusterrolebinding-tgo
+  246  kubectl edit clusterrolebinding-tgo
+  247  kubectl edit ClusterRole/cr-prx-1
+  248  kubectl get pods -n ns-prx-1
+  249  watch -n 1 "kubectl get pods -n ns-prx-1"
+  250  kubectl describe pod django-app-596b6c5fc5-xw4zr -n ns-prx-1
+  251  watch -n 1 "kubectl get pods -n ns-prx-1"
+  252  kubectl get nodes
+  253  watch -n 1 "kubectl get pods -n ns-prx-1"
+  254  kubectl get pods -n ns-prx-1
+  255  kubectl get pods -n ns-prx-1 kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<node>
+  256  kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=node1
+  257  kubectl get nodes
+  258  kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=node1
+  259  kubectl get pods -n ns-prx-1
+  260  kubectl describe django-app-596b6c5fc5-xw4zr  -n ns-prx-1
+  261  kubectl get pods -n ns-prx-1
+  262  kubectl describe pod django-app-596b6c5fc5-xw4zr -n ns-prx-1
+  263  kubectl get pods -n ns-prx-1
+  264  kubectl delete pod django-app-596b6c5fc5-xw4zr -n ns-prx-1
+  265  kubectl get pods -n ns-prx-1
+  266  kubectl get clusterrolebinding
+  267  kubectl get clusterrolebinding | grep prx
+  268  kubectl get clusterrole | grep dev
+  269  kubectl edit clusterrole cr-prx-dev-7 
+  270  kubectl get ingress -n ns-prx-7
+  271  ls
+  272  cd atefwork/PRODUCTION/
+  273  ls
+  274  sudo nano dukhan-ing.yaml
+  275  kubectl apply -f dukhan-ing.yaml 
+  276  kubectl get configmap -n ns-prx-7
+  277  kubectl delete -n ns-prx-7 configmaps nginx-config-volume
+  278  sudo nano dukhan-ing.yaml
+  279  kubectl get deploy -n ns-prx-7
+  280  kubectl apply -f dukhan-ing.yaml 
+  281  kubectl get configmap -n ns-prx-7
+  282  kubectl delete -n ns-prx-7 configmap barwa-corp-front-dev
+  283  kubectl apply -f dukhan-ing.yaml 
+  284  kubectl get configmap -n ns-prx-7
+  285  kubectl get configmaps -n ns-prx-7 barwa-corp-front-dev 
+  286  kubectl edit configmaps -n ns-prx-7 barwa-corp-front-dev 
+  287  kubectl get ing -n ns-prx-7
+  288  helm list -n ns-prx-7
+  289  helm list -n ns-prx-6
+  290  cd 
+  291  helm list -n ns-prx-7
+  292  helm list -n ns-prx-6
+  293  kubectl get deploy -n ns-prx-6 
+  294  kubectl get ingress -n ns-prx-6 
+  295  kubectl get all -n ns-prx-6 
+  296  history 
+  297  history | grep ingress
+  298  kubectl get ingress -n ns-prx-6
+  299  curl -Is http://adib-api.qa.proxym-it.net/adi-microfinances/swagger-ui/
+  300  kubectl get deployments.apps -n ns-prx-6
+  301  kubectl get ingress -n ns-prx-6
+  302  kubectl get svc -n ns-prx-6
+  303  helm list -n ns-prx-3
+  304  helm list -n ns-prx-6
+  305  kubectl get ingress -n ns-prx-6 
+  306  kubectl get ingress -n ns-prx-6
+  307  kubectl get deploy -n ns-prx-6
+  308  ls
+  309  kubectl edit deployments.apps -n ns-prx-6 comar-bo-dev-springboot 
+  310  helm list -n ns-prx-6
+  311  kubectl get all 
+  312  kubectl get all -n default 
+  313  kubectl get all -n brh
+  314  kubectl get all -n default 
+  315  kubectl delete pod/dnsutils -n default
+  316  kubectl delete pod/dnsutils -n default --force
+  317  kubectl get all -n default 
+  318  sudo nano dns.yaml
+  319  kubectl apply -f dns.yaml 
+  320  kubectl get all -n default 
+  321  kubectl logs -n default -f dnsutils
+  322  kubectl describe po -n default -f dnsutils
+  323  kubectl get all -n default 
+  324  kubectl describe po -n default -f dnsutils
+  325  kubectl describe po -n default dnsutils
+  326  kubectl get po,deploy -n ns-prx-6
+  327  kubectl get po,deploy -n ns-prx-6 | grep front 
+  328  kubectl get ingress -n ns-prx-6
+  329  kubectl delete ingress -n ns-prx-6 insurise-front-insurise-demo
+  330  kubectl get ingress -n ns-prx-6
+  331  helm list -n ns-prx-6
+  332  kubectl get deployments.apps -n ns-prx-6
+  333  helm delete -n ns-prx-6 insurise-bo-demo
+  334  kubectl delete deployments.apps -n ns-prx-6 insurise-bo-demo-springboot
+  335  kubectl get all -n ns-prx-6
+  336  kubectl get all -n default 
+  337  kubectl delete -n default pod/dnsutils --force
+  338  kubectl get node --labels
+  339  kubectl get nodes --show-labels
+  340  ls
+  341  sudo nano dns.yaml 
+  342  kubectl apply -f dns.yaml 
+  343  sudo nano+15 dns.yaml 
+  344  sudo nano +15 dns.yaml 
+  345  kubectl apply -f dns.yaml 
+  346  sudo nano +15 dns.yaml 
+  347  kubectl apply -f dns.yaml 
+  348  sudo nano +15 dns.yaml 
+  349  kubectl apply -f dns.yaml 
+  350  sudo nano dns.yaml 
+  351  kubectl apply -f dns.yaml 
+  352  sudo nano dns.yaml 
+  353  kubectl apply -f dns.yaml 
+  354  sudo nano dns.yaml 
+  355  kubectl apply -f dns.yaml 
+  356  sudo nano dns.yaml 
+  357  kubectl apply -f dns.yaml 
+  358  kubectl get all -n default 
+  359  kubectl get all -n default -o wide 
+  360  kubectl get ep coredns --namespace=kube-system
+  361  kubectl get svc -n kube-system
+  362  nslookup albaraka-api-dev-springboot.ns-prx-8.svc.cluster.local
+  363  kubectl logs coredns-8474476ff8-dz8ws  --namespace=kube-system 
+  364  kubectl get nodes -n kube-system 
+  365  kubectl get podes -n kube-system 
+  366  kubectl get pod -n kube-system 
+  367  kubectl logs coredns-8474476ff8-2td5k  --namespace=kube-system 
+  368  kubectl get pod -n kube-system 
+  369  kubectl get pods,svc --all-namespaces -o wide |grep dns
+  370  kubectl exec -ti coredns-8474476ff8-rmc2c -- ping kubernetes
+  371  coredns-8474476ff8-rmc2ckubectl exec -ti busybox -- ping kubernetes
+  372  kubectl exec -ti busybox -- ping kubernetes
+  373  kubectl get namespace
+  374  kubectl get pods -n ns-prx-1
+  375  kubectl get pods -n ns-prx-2
+  376  kubectl get pods -n ns-prx-3
+  377  kubectl get pods -n ns-prx-4
+  378  kubectl get pods -n ns-prx-5
+  379  kubectl get pods -n ns-prx-6
+  380  kubectl get pods -n ns-prx-7
+  381  kubectl get pods -n ns-prx-8
+  382  kubectl exec -ti keycloak-0 -- ping kubernetes
+  383  kubectl exec -ti keycloak-0 -- ping kubernetes -n ns-prx-8
+  384  ping kubernetes
+  385  kubectl -n kube-system -l k8s-app=kube-dns get pods
+  386  kubectl -n kube-system -l k8s-app=kube-dns logs
+  387  kubectl get pods -n ns-prx-7
+  388  kubectl get pods -n ns-prx-8
+  389  kubectl get pods -n ns-prx-9
+  390  kubectl get pods -n ns-prx-10
+  391  kubectl exec redis-maste0 
+  392  kubectl get replicasets
+  393  kubectl get replicasets -n ns-prx-1
+  394  kubectl get replicasets -n ns-prx-
+  395  kubectl get replicasets -n ns-prx-3
+  396  kubectl get replicasets -n ns-prx-4
+  397  kubectl get replicasets -n ns-prx-5
+  398  kubectl get pods --all-namespaces
+  399  kubectl get pods --all-namespaces -o wide
+  400  kubectl get nodes
+  401  w
+  402  kubectl get nodes
+  403  kubectl get nodes -o wide
+  404  kubectl get nodes
+  405  kubectl get nodes 
+  406  kubectl get nodes -o wide 
+  407  sudo yum install epel-release
+  408  ssh-copy-id support@172.16.10.15
+  409  ssh-copy-id root@172.16.10.15
+  410  cd kubespray/inventory/mycluster/
+  411  ls
+  412  sudo nano hosts.yaml 
+  413  cd ..
+  414  sudo ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass --become-user=root
+  415  sudo nano inventory/mycluster/hosts.yaml 
+  416  sudo ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass --become-user=root
+  417  cd
+  418  ls
+  419  cd kubespray/
+  420  ls
+  421  ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass
+  422  sudo nano inventory/mycluster/hosts.yaml 
+  423  ssh-copy-id root@172.16.10.15
+  424  ssh support@172.16.10.15
+  425  ssh root@172.16.10.15
+  426  sudo nano /etc/hosts
+  427  ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass
+  428  ssh support@172.16.10.14
+  429  ssh-copy-id support@172.16.10.14
+  430  exit 
+  431  ssh-copy-id root@172.16.10.14
+  432  ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass
+  433  cd kubespray/
+  434  ansible-playbook scale.yml -i inventory/mycluster/hosts.yaml --limit=node5 -b --ask-become-pass
+  435  date
+  436  timedatectl
+  437  sudo timedatectl set-timezone Africa/Tunis
+  438  date
+  439  sudo -s
+  440  exit
+  441  kubectl get pods -n kube-system | grep core
+  442  kubectl top pods -n kube-system | grep core
+  443  tail -f /var/log/messages
+  444  sudo -s
+  445  kubectl top nodes
+  446  cat /etc/resolv.conf
+  447  sudo -s
+  448  kubectl get pods -n kube-system
+  449  kubectl get pods -n kube-system | grep calico
+  450  kubectl get pods -n kube-system | grep coredns
+  451  watch -n 1 "kubectl get pods -n kube-system | grep coredns"
+  452  watch -n 1 "kubectl top pods -n kube-system | grep coredns"
+  453  kubectl get pods -n ns-prx-13
+  454  kubectl get pods -n ns-prx-13 | grep running
+  455  kubectl get pods -n ns-prx-13 | grep Runnin
+  456  kubectl exec -it farmer-services-demo-79b746757-xns86 -n ns-prx-13 /bin/bash 
+  457  kubectl exec -it farmer-services-dev-59cfffc89d-c9srl -n ns-prx-13 /bin/bash 
+  458  kubectl get metrics -n ns-prx-7
+  459  kubectl  get hpa
+  460  kubectl  get hpa -n ns-prx-7
+  461  kubectl  edit clusterrole admin
+  462  kubectl  get clusterrole | grep prx
+  463  kubectl  get clusterrolebinding
+  464  kubectl  get clusterrolebinding | grep admin
+  465  kubectl  get clusterrolebinding admin-cluster-admin
+  466  kubectl  get clusterrolebinding admin-cluster-admin -o yaml
+  467  kubectl  edit clusterrole cluster-admin 
+  468  kubectl  get clusterrole | grep prx
+  469  ll
+  470  cd ahmed/
+  471  ll
+  472  nano clusterrolebindingadmin.yaml 
+  473  kubectl edit clusterrole cr-prx-TGO-USR-3 
+  474  kubectl describe clusterrole system:metrics-server
+  475  kubectl describe clusterrole view-metrics
+  476  kubectl edit clusterrole cr-prx-TGO-USR-3 
+  477  kubectl top nodes
+  478  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  479  kubectl top nodes
+  480  kubectl get nodes
+  481  kubectl top nodes
+  482  kubectl top pods
+  483  kubectl get ns
+  484  kubectl top pods
+  485  kubectl top nodes
+  486  kubectl get pods
+  487  kubectl top nodes
+  488  kubectl top pods
+  489   kubectl edit deployments.apps -n kube-system metrics-server 
+  490  kubectl top pods
+  491   kubectl edit deployments.apps -n kube-system metrics-server 
+  492  kubectl describe deployments.apps -n kube-system metrics-server 
+  493  kubectl get deployments.apps -n kube-system 
+  494  kubectl top pods
+  495  kubectl top pods -n ns-prx-5
+  496  kubectl top nodes
+  497  kubectl get deployments -n kube-system
+  498  kubectl get deployments coredns -n kube-system -o yaml 
+  499  kubectl get deployments coredns -n kube-system -o yaml  > coredns.yaml
+  500  vi coredns.yaml 
+  501  kubectl top pods -n kube-system
+  502  kubectl top pods -n kube-system | grep coredns
+  503  vi coredns.yaml 
+  504  kubectl top pods -n kube-system | grep coredns
+  505  kubectl get pods -n kube-system | grep coredns
+  506  kubectl top pods -n kube-system | grep coredns
+  507  vi coredns.yaml 
+  508  kubectl exec -it pod/django-app /bin/bash -n ns-prx-1
+  509  kubectl get ing -n ns-prx-7
+  510  kubectl top pods -n kube-system | grep coredns
+  511  kubectl exec -it coredns-8474476ff8-2td5k  -n kube-system /bin/bash 
+  512  kubectl exec -it coredns-8474476ff8-2td5k  -n kube-system /bin/sh
+  513  kubectl exec -it coredns-8474476ff8-2td5k ip a  -n kube-system 
+  514  kubectl exec -it coredns-8474476ff8-2td5k ls  -n kube-system 
+  515  kubectl top pods -n kube-system | grep coredns
+  516  watch -n 1 "xx.dev.proxym-it.tn"
+  517  watch -n 1 "nslookup xx.dev.proxym-it.tn"
+  518  kubectl top pods -n kube-system | grep coredns
+  519  kubectl get pods -n kube-system | grep coredns
+  520  kubectl top pods -n kube-system | grep coredns
+  521  kubectl get pods -n kube-system | grep coredns
+  522  tail -f /var/log/messages
+  523  sudo tail -f /var/log/messages
+  524  kube
+  525  kubectl logs --namespace=kube-system -l k8s-app=kube-dns
+  526  kubectl exec -i -t dnsutils -- nslookup kubernetes.default
+  527  kubectl get node -n kube-system 
+  528  kubectl get pod -n kube-system 
+  529  kubectl get pods --namespace=kube-system -l k8s-app=kube-dns
+  530  kubectl logs --namespace=kube-system -l k8s-app=kube-dns
+  531  kubectl top nodes
+  532  kubectl top pods --all-namespaces
+  533  kubectl edit clusterrole cr-prx-dev-7 
+  534  kubectl get pods -n ns-prx-2
+  535  kubectl exec -it cv-generator-front-dev-56dc588798-lq7ql -n ns-prx-2 /bin/bash
+  536  kubectl exec -it cv-generator-front-dev-56dc588798-lq7ql -n ns-prx-2 /bin/sh
+  537  kubectl get pods -n kube-system
+  538  kubectl get pods -n kube-system | grep coredns
+  539  kubectl top pods -n kube-system | grep coredns
+  540  kubectl get pods -n kube-system | grep coredns
+  541  kubectl logs -f coredns-8474476ff8-r94nq  -n kube-system
+  542  kubectl get pods -n kube-system | grep coredns
+  543  kubectl logs -f coredns-8474476ff8-r94nq  -n kube-system
+  544  kubectl logs -f coredns-8474476ff8-shbpz  -n kube-system
+  545  kubectl get pods -n kube-system | grep coredns
+  546  kubectl get pods -n kube-system -o=custom-columns=NODE | grep coredns
+  547  kubectl get pods -n kube-system -o=custom-columns=NODE:.spec.nodeName | grep coredns
+  548  kubectl get pods -n kube-system | grep coredns
+  549  kubectl get pods -o wide -n kube-system | grep coredns
+  550  kubectl get pods -n kube-system | grep coredns
+  551  kubectl get rolebinding -n rb-prx-33
+  552  kubectl get rolebinding -n ns-prx-9
+  553  kubectl get rolebinding rb-prx-33 -n ns-prx-9 -o yaml
+  554  kubectl get clusterrole | grep dev
+  555  kubectl edit clusterrole cr-prx-dev-7
+  556  kubectl -n kubesphere-system edit cc ks-installer
+  557  kubectl edit clusterrole cr-prx-dev-7
+  558  kubectl -n kubesphere-system edit cc ks-installer
+  559  kubectl edit clusterrole cr-prx-dev-7
+  560  kubectl top nodes
+  561  kubectl get nodes
+  562  kubectl top nodes
+  563  kubectl get clusterrole
+  564  kubectl get clusterrole | grep metric
+  565  kubectl get clusterrole system:metrics-server -o yaml
+  566  kubectl get clusterrole | grep metric
+  567  cd ahmed/
+  568  ll
+  569  cp clusterrolemetrics.yaml
+  570  nano clusterrolemetrics.yaml
+  571  vi clusterrolemetrics.yaml 
+  572  kubectl apply -f clusterrolemetrics.yaml 
+  573  vi clusterrolemetrics.yaml 
+  574  kubectl apply -f clusterrolemetrics.yaml 
+  575  vi clusterrolemetrics.yaml 
+  576  kubectl apply -f clusterrolemetrics.yaml 
+  577  kubectl get nodes
+  578  kubectl get nodes -o wide
+  579  kubectl get all -n shared-apps 
+  580  kubectl get all -n kubesphere-system
+  581  kubectl get po,pvc -n kubesphere-system
+  582  kubectl describe po -n kubesphere-system 
+  583  kubectl get po,pvc -n kubesphere-system
+  584  kubectl delete pod/minio-859cb4d777-sxbhd -n kubesphere-system
+  585  curl -Is http://172.16.10.10:30880/apps
+  586  kubectl get rolebinding -n ns-prx-9
+  587  kubectl get all -n ns-prx-18 
+  588  kubectl get all -n ns-prx-17
+  589  kubectl get all -n ns-prx-16
+  590  kubectl get all -n ns-prx-15
+  591  velero backup get 
+  592  velero restore get 
+  593  kubectl get all -n velero 
+  594  kubectl get ingress -n shared-apps 
+  595  velero install  --provider aws  --plugins velero/velero-plugin-for-aws:v1.4.0  --bucket velero-prod   --secret-file ./credentials-velero  --use-volume-snapshots=true  --backup-location-config region=aws,s3ForcePathStyle="true",s3Url=http://minioapi.demo.proxym-it.tn  --image velero/velero:v1.8.0   --snapshot-location-config region="aws" --use-restic
+  596  kubectl logs deployment/velero -n velero
+  597  velero backup get 
+  598  velero restore create --from-backup start-u-backup-22-02-2022 --namespace-mappings start-u:ns-prx-18
+  599  velero restore get 
+  600  velero restore delete start-u-backup-22-02-2022-20220307115015
+  601  kubectl logs -n velero -f velero-55684bc54d-24h9t 
+  602  kubectl edit deployments.apps -n velero velero 
+  603  velero backup-location get 
+  604  history | grep "backup-location"
+  605  history | grep "velero"
+  606  velero backup-location edit 
+  607  kubectl -n velero edit backupstoragelocations.velero.io 
+  608  velero backup-location edit 
+  609  velero backup-location get 
+  610  kubectl delete po -n velero velero-55684bc54d-24h9t 
+  611  velero restore-location get 
+  612  kubectl edit -n velero backups.velero.io 
+  613  kubectl edit -n velero backupstoragelocations.velero.io 
+  614  velero install  --provider aws  --plugins velero/velero-plugin-for-aws:v1.4.0  --bucket velero-prod   --secret-file ./credentials-velero  --use-volume-snapshots=true  --backup-location-config region=aws,s3ForcePathStyle="true",s3Url=http://minioapi.demo.proxym-it.tn  --image velero/velero:v1.8.0   --snapshot-location-config region="aws" --use-restic
+  615  kubectl edit -n velero backupstoragelocations.velero.io 
+  616  velero backup-location get 
+  617  kubectl logs -f -n velero velero-55684bc54d-g2w8q 
+  618  velero backup-location get 
+  619  kubectl delete namespace/velero clusterrolebindings.rbac.authorization.k8s.io/velero
+  620  kubectl delete crds -l component=velero
+  621  velero backup-location get 
+  622  ls
+  623  cd atefwork/
+  624  ls
+  625  cd velero/
+  626  ls
+  627  velero install  --provider aws  --plugins velero/velero-plugin-for-aws:v1.4.0  --bucket velero-prod   --secret-file ./credentials-velero  --use-volume-snapshots=true  --backup-location-config region=aws,s3ForcePathStyle="true",s3Url=http://minioapi.demo.proxym-it.tn  --image velero/velero:v1.8.0   --snapshot-location-config region="aws" --use-restic
+  628  kubectl logs deployment/velero -n velero
+  629  velero backup-location get 
+  630  velero backup get 
+  631  velero backup-location add
+  632  velero backup-location create --help
+  633  velero backup-location create dev-test --bucket dev-test --provider aws --config region=minio,s3ForcePathStyle="true",s3Url=http://minio-api.demo.proxym-it.tn,secret-file ./credentials-velero
+  634  velero backup-location create dev-test --bucket dev-test --provider aws --config region=minio,s3ForcePathStyle="true",s3Url=http://minio-api.demo.proxym-it.tn,--secret-file ./credentials-velero
+  635  velero backup-location create dev-test --bucket dev-test --provider aws --config secret-file ./credentials-velero region=minio,s3ForcePathStyle="true",s3Url=http://minio-api.demo.proxym-it.tn
+  636  history | grep backup
+  637  kubectl get ns
+  638  kubectl get pods -n ns-prx-19
+  639  kubectl get pods -n ns-prx-18
+  640  kubectl get clusterrolebinding | grep prx
+  641  kubectl get clusterrolebinding crb-prx-tgo-usr-1 
+  642  kubectl get clusterrolebinding crb-prx-tgo-usr-1 -o yaml
+  643  kubectl get  -n ns-prx-18
+  644  k
+  645  kubectl logs -n velero velero-77bc55f74b-9dg7c 
+  646  velero backup-location get 
+  647  velero backup-location create dev-test     --provider=aws     --bucket=dev-test     --region=minio --s3ForcePathStyle="true" \ 
+  648  --s3Url=http://minio-api.demo.proxym-it.tn \
+  649  velero backup-location create dev-test     --provider=aws     --bucket=dev-test     --config.region=minio     --s3ForcePathStyle="true" \ 
+  650      --s3Url=http://minio-api.demo.proxym-it.tn \
+  651  kubectl get backupstoragelocations.velero.io 
+  652  kubectl get backupstoragelocations.velero.io --all-namespaces 
+  653  history | grep backupstorage
+  654  velero backup get 
+  655  velero backup describe startu-28022022-lts --details 
+  656  velero restore create --from-backup startu-28022022-lts --namespace-mappings start-u:ns-prx-18
+  657  kubectl get po,pvc -n ns-prx-18
+  658  velero restore create --from-backup startu-28022022-lts --namespace-mappings start-u:ns-prx-18
+  659  kubectl get po,pvc -n ns-prx-18
+  660  velero backup describe startu-28022022-lts --details 
+  661  kubectl logs -f -n velero velero-77bc55f74b-9dg7c 
+  662  kubectl get all -n ns-prx-18 
+  663  kubectl get po,pvc -n ns-prx-18 
+  664  cd ahmed/
+  665  ll
+  666  nano clusterrole-ns-prx-13.yaml
+  667  kubectl apply -f clusterrole-ns-prx-13.yaml
+  668  kubectl apply -f clusterrole-ns-prx-13.yaml 
+  669  nano clusterrole-ns-prx-13.yaml
+  670  kubectl get pods --all-namespace
+  671  kubectl get pods --all-namespaces
+  672  kubectl get pods --all-namespaces | grep keycl
+  673  kubectl exec -it  keycloak-0  /bin/bash -n ns-prx-10   
+  674  wget https://repo.zabbix.com/zabbix/4.4/rhel/8/x86_64/zabbix-release-4.4-1.el8.noarch.rpm
+  675  rpm -i zabbix-release-4.4-1.el8.noarch.rpm 
+  676  sudo rpm -i zabbix-release-4.4-1.el8.noarch.rpm
+  677  systemctl --all | grep zabbix
+  678  nano /etc/zabbix/zabbix_agentd.d/zbxpcp.conf 
+  679  cd /etc/zabbix/
+  680  ll
+  681  touch  zabbix_agentd.conf
+  682  sudo  zabbix_agentd.conf
+  683  sudo  touch zabbix_agentd.conf
+  684  sudo nano  zabbix_agentd.conf
+  685  systemctl start zabbix
+  686  sudo -s
+  687  kubectl get pods -n ns-prx-1
+  688  kubectl exec -it django-app-596b6c5fc5-7jpxx /bin/bash -n ns-prx-1
+  689  kubectl get svc --all-namespaces | grep -i=loadbalancer
+  690  kubectl get svc --all-namespaces | grep -i loadbalancer
+  691  kubectl exec -it -n ns-prx-7 corporate-ha-proxy bash 
+  692  kubectl describe -n ns-prx-7 corporate-ha-proxy
+  693  kubectl describe -n ns-prx-7 svc corporate-ha-proxy
+  694  kubectl get po,ing -n ns-prx-7
+  695  kubectl exec -it pod/corporate-ha-proxy-68b78d9d46-jqvfd -n ns-prx-7
+  696  kubectl exec -it pod/corporate-ha-proxy-68b78d9d46-jqvfd -n ns-prx-7 bash 
+  697  kubectl exec -it pod/corporate-ha-proxy-68b78d9d46-jqvfd -n ns-prx-7 sh  
+  698  ls 
+  699  kubectl exec -it pod/corporate-ha-proxy-68b78d9d46-jqvfd -n ns-prx-7 /bin/bash 
+  700  kubectl get svc --all-namespaces | grep -i loadbalancer
+  701  ls 
+  702  cd a
+  703  cd ahmed/
+  704  ls
+  705  cd ..
+  706  ls
+  707  cd atefwork/
+  708  ls
+  709  kubectl get ing -n ns-prx-4
+  710  kubectl get --all-resources | keycloak.demo.proxym-it.net
+  711  kubectl get ing -n ns-prx-10
+  712  kubectl describe ing keycloak-2 -n  ns-prx-10
+  713  kubectl get svc keycloak-2 -n  ns-prx-10
+  714  kubectl get svc  -n  ns-prx-10
+  715  kubectl get svc  -n  ns-prx-10 | grep keycloak
+  716  kubectl describe ing keycloak-2 -n  ns-prx-10
+  717  kubectl edit ing keycloak-2 -n  ns-prx-10
+  718  kubectl edit svc keycloak -n  ns-prx-10
+  719  kubectl get svc keycloak -n  ns-prx-10
+  720  kubectl get svc keycloak -n  ns-prx-10 -o yaml > keycloakcluster.yaml
+  721  kubectl edit svc keycloak -n  ns-prx-10
+  722  cp keycloakcluster.yaml keycloaknodeport.yaml 
+  723  nano keycloaknodeport.yaml 
+  724  vi keycloaknodeport.yaml 
+  725  kubectl apply -f keycloaknodeport.yaml 
+  726  kubectl get svc -n ns-prx-10
+  727  kubectl get svc -n ns-prx-10 | grep key
+  728  kubectl get pods -n ns-prx-10
+  729  kubectl get pods -n ns-prx-10 | grep keycloak
+  730  kubectl edit svc keycloak-node-port -n ns-prx-10
+  731  kubectl get pods -n ns-prx-10 | grep keycloak
+  732  kubectl edit svc keycloak-node-port -n ns-prx-10
+  733  kubectl get configmap -n ns-prx-10
+  734  kubectl get configmap -n ns-prx-10 | grep key
+  735  kubectl edit configmap keycloak-env-vars -n ns-prx-10 | grep key
+  736  kubectl edit configmap keycloak-env-vars -n ns-prx-10 
+  737  kubectl get pods -n ns-prx-10
+  738  kubectl delete pod keycloak-0 -n ns-prx-10
+  739  kubectl get pods -n ns-prx-10
+  740  kubectl get svc -n ns-prx-10
+  741  kubectl get svc -n ns-prx-10 | grep key
+  742  kubectl edit configmap keycloak-env-vars -n ns-prx-10 
+  743  kubectl get svc keycloak-node-port -n ns-prx-10 
+  744  kubectl get svc keycloak-node-port -n ns-prx-10  -o yaml
+  745  cd ahmed/
+  746  ls
+  747  nano cluster-configuration.yaml 
+  748  nano clusterrole-ns-prx-13.yaml 
+  749  kubectl apply clusterrole-ns-prx-13.yaml 
+  750  kubectl apply -f clusterrole-ns-prx-13.yaml 
+  751  kubectl get ing -n ns-prx-4
+  752  kubectl get ing -n ns-prx-6
+  753  kubectl get ing -n ns-prx-6 | grep takka
+  754  kubectl get ing adib-front-qa -n  ns-prx-6 -o yaml > adib-front-qa.yaml
+  755  vi adib-front-qa.yaml 
+  756  mv adib-front-qa.yaml adib-front-qa-https.yaml
+  757  vi adib-front-qa-https.yaml 
+  758  cd ahmed/
+  759  ll
+  760  ls
+  761  nano ingresdeploy.yaml 
+  762  ll
+  763  nano adib-front-qa-https.yaml 
+  764  kubectl apply -f adib-front-qa-https.yaml 
+  765  kubectl get ing -n ns-prx-7
+  766  kubectl get ing -n ns-prx-8
+  767  kubectl get ing -n ns-prx-6
+  768  kubectl get ing -n ns-prx-8 | grep takk
+  769  kubectl get ing -n ns-prx-8 | grep adib-front-qa-https
+  770  kubectl get ing adib-front-qa-https -n ns-prx-8 
+  771  kubectl get ing -n ns-prx-6
+  772  kubectl get ing adib-front-qa-https -n ns-prx-8 
+  773  kubectl get ing adib-front-qa-https -n ns-prx-6
+  774  kubectl get ing  -n ns-prx-6 | grep adib
+  775  cd ahmed/
+  776  ls
+  777  nano clusterrolebindingadmin.yaml
+  778  nano clusterrole-ns-prx-13.yaml
+  779  kubectl apply -f clusterrole-ns-prx-13.yaml
+  780  kubectl get nodes 
+  781  kubectl get nodes  -o wide
+  782  kubectl get ing -n ns-prx-6
+  783  kubectl get ing -n ns-prx-6 | grep keycloak
+  784  kubectl get ing -n ns-prx-4 | grep keycloak
+  785  kubectl get ing -n ns-prx-9 | grep keycloak
+  786  kubectl get ing -n ns-prx-10 | grep keycloak
+  787  ping xxx.demo.proxym-it.net
+  788  ping keycloak.demo.proxym-it.net
+  789  kubectl describe pvc test-pvc -n shared-apps
+  790  kubectl get pvc 
+  791  kubectl get pv 
+  792  kubectl get pvc -n shared-apps 
+  793  kubectl get all 
+  794  ls
+  795  cd atefwork/
+  796  ls
+  797  cd fulltest/
+  798  ls
+  799  cat claim.yaml 
+  800  sudo nano claim.yaml 
+  801  ls
+  802  sudo nano configmap.yaml 
+  803  kubectl create ns start-z
+  804  kubectl apply -f claim.yaml 
+  805  kubectl get pvc -n start-z 
+  806  kubectl describe pvc -n start-z 
+  807  /persistentvolumes
+  808  helm list 
+  809  kubectl get all 
+  810  kubectl get storageclass
+  811  kubectl edit storageclass nfs-client
+  812  helm listg 
+  813  helm list
+  814  ls
+  815  cd ..
+  816  ls
+  817  kubectl get deploy 
+  818  kubectl edit deploy nfs-client-provisioner-nfs-subdir-external-provisioner 
+  819  kubectl get replicasets.apps 
+  820  kubectl get rs nfs-client-provisioner-nfs-subdir-external-provisioner-59fbc9f458 
+  821  kubectl edit deploy nfs-client-provisioner-nfs-subdir-external-provisioner 
+  822  ls
+  823  cd fulltest/
+  824  ls
+  825  kubectl delete -f claim.yaml 
+  826  sudo nano claim.yaml 
+  827  kubectl apply -f claim.yaml 
+  828  kubectl get pvc -n ns-prx-9
+  829  kubectl edit pvc -n ns-prx-9 holahola
+  830  kubectl describe pvc -n ns-prx-9 holahola
+  831  kubectl get events --all-namespaces
+  832  kubectl get events --all-namespaces | grep error 
+  833  kubectl get events --all-namespaces | grep failed 
+  834  kubectl describe pvc -n ns-prx-9 holahola
+  835  showmount -e 172.16.100.59
+  836  tail -f /var/log/messages
+  837  sudo tail -f /var/log/messages
+  838  sudo tail -100 /var/log/messages
+  839  ls
+  840  cat claim.yaml 
+  841  helm list 
+  842  kubectl get all 
+  843  kubectl delete pod/nfs-client-provisioner-nfs-subdir-external-provisioner-59f5nkhd
+  844  kubectl get all 
+  845  kubectl delete pod/nfs-client-provisioner-nfs-subdir-external-provisioner-59f8gjpt
+  846  kubectl get all 
+  847  ls
+  848  kubectl apply -f claim.yaml 
+  849  kubectl delete -f claim.yaml 
+  850  sudo nano claim.yaml 
+  851  kubectl apply -f claim.yaml 
+  852  kubectl get po -n ns-prx-9
+  853  kubectl get pvc -n ns-prx-9
+  854  kubectl get clusterrole cr-prx-test-9 -o yaml
+  855  kubectl get clusterrole cr-prx-metric -o yaml
+  856  df -h atefwork/
+  857  df -Th atefwork/
+  858  du -sh atefwork/
+  859  ls
+  860  cd atefwork/
+  861  ls
+  862  cd PRODUCTION/
+  863  LS
+  864  ls
+  865  head -5 dns-horizontal-autoscaler.yaml 
+  866  head -5 dukhan-ing.yaml 
+  867  head dukhan-ing.yaml 
+  868  lz
+  869  ls
+  870  cd ..
+  871  ls
+  872  cd fulltest/
+  873  ls
+  874  head -5 deploy.yaml 
+  875  head -6 deploy.yaml 
+  876  tail -1 /var/log/messages
+  877  sudo tail -1 /var/log/messages
+  878  ls
+  879  wc deploy.yaml 
+  880  kubectl get ns 
+  881  kubectl get all --all-namespaces 
+  882  kubectl get ns 
+  883  kubectl get deployments.apps n kubesphere-monitoring-federated
+  884  kubectl get deployments.apps -n kubesphere-monitoring-federated
+  885  kubectl get deployments.apps -n kubesphere-monitoring-system 
+  886  kubectl get pod -n kubesphere-monitoring-system
+  887  kubectl get pod -n kubesphere-system 
+  888  kubectl get pod -n kubesphere-monitoring-system
+  889  kubectl describe -n kubesphere-monitoring-system  po notification-manager-deployment-78664576cb-b72hq
+  890  kubectl logs -n kubesphere-monitoring-system   notification-manager-deployment-78664576cb-b72hq
+  891  kubectl get pod -n kubesphere-monitoring-system
+  892  ls
+  893  ./uninsta.sh 
+  894   kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.2.1/kubesphere-installer.yaml
+  895  kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.2.1/cluster-configuration.yaml
+  896  kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
+  897  kubectl get configmap -n ns-prx-6
+  898  kubectl get configmap -n ns-prx-6 | grep ke
+  899  kubectl get pod -n ns-prx-6 | grep ke
+  900  kubectl get configmap -n ns-prx-6 | grep ke
+  901  kubectl get ing -n ns-prx-6 | grep ke
+  902  kubectl get pod -n ns-prx-6 | grep ke
+  903  kubectl exec -it bh-keycloak-67b8b88c79-cpwn5 /bin/bash -n ns-prx-6
+  904  kubectl stop bh-keycloak-67b8b88c79-cpwn5  -n ns-prx-6
+  905  kubectl stop pod bh-keycloak-67b8b88c79-cpwn5  -n ns-prx-6
+  906  kubectl rm pod bh-keycloak-67b8b88c79-cpwn5  -n ns-prx-6
+  907  kubectl delete pod bh-keycloak-67b8b88c79-cpwn5  -n ns-prx-6
+  908  kubectl get pod -n ns-prx-6 | grep ke
+  909  kubectl logs -f bh-keycloak-67b8b88c79-sldwx -n ns-prx-6
+  910  kubectl exec -it bh-keycloak-67b8b88c79-cpwn5 /bin/bash -n ns-prx-6
+  911  kubectl exec -it bh-keycloak-67b8b88c79-sldwx -n ns-prx-6
+  912  kubectl exec -it bh-keycloak-67b8b88c79-sldwx -n ns-prx-6 /bin/bash
+  913  kubectl describe bh-keycloak-67b8b88c79-sldwx -n ns-prx-6
+  914  kubectl describe pod bh-keycloak-67b8b88c79-sldwx -n ns-prx-6
+  915  kubectl get service -n ns-prx-2
+  916  kubectl get nodes
+  917  exit
+  918  kubectl get nodes
+  919  exit
+  920  kubectl get nodes
+  921  exit
+  922  kubectl describe pvc proxytokens-canary-redis -n ns-prx-18
+  923  kubectl get pvc  -n ns-prx-18
+  924  kubectl get pvc canary-log-volume  -n ns-prx-18 -o yaml
+  925  kubectl get pv   -n ns-prx-18 -o yaml
+  926  kubectl get pv   -n ns-prx-18 
+  927  kubectl get pvc canary-log-volume  -n ns-prx-18 -o yaml
+  928  kubectl get pv nfs-client  -n ns-prx-18 
+  929  kubectl get pv  -n ns-prx-18 
+  930  kubectl get pvc canary-log-volume  -n ns-prx-18 -o yaml
+  931  kubectl get pv  -n ns-prx-18 
+  932  kubectl get pv  | grep ns-prx-19
+  933  kubectl get pv  | grep ns-prx-18
+  934  kubectl get pvc  -n ns-prx-18 -o yaml
+  935  kubectl get pvc  -n ns-prx-18 
+  936  kubectl get ns
+  937  kubectl get pods -n brh
+  938  kubectl logs -f nfs-client-provisioner-nfs-subdir-external-provisioner-59fbzcjk -n brh
+  939  kubectl get pv
+  940  kubectl describe pv pvc-07983f8d-cabb-42a8-949a-327adb07f785
+  941  kubectl describe pv pvc-ff8340d0-6070-442b-9726-ebfd2ae1c2c8
+  942  kubectl get pods -n brh
+  943  kubectl delete pod nfs-client-provisioner-nfs-subdir-external-provisioner-59fbzcjk -n brh
+  944  kubectl delete pod nfs-client-provisioner-nfs-subdir-external-provisioner-59fglwlq -n brh
+  945  kubectl get pods -n brh
+  946  kubectl delete pod nfs-client-provisioner-nfs-subdir-external-provisioner-59fnp9tb -n brh
+  947  kubectl get pvc -n ns-prx-18
+  948  watch -n 1 "kubectl get pvc -n ns-prx-18"
+  949  kubectl get pod  -n brh
+  950  kubectl describe pod nfs-client-provisioner-nfs-subdir-external-provisioner-59f95tjd -n brh
+  951  kubectl get nodes
+  952  kubectl get nodes -o wide
+  953  ping 172.16.10.15  
+  954  ssh support@172.16.10.15  
+  955  kubectl get nodes -o wide
+  956  ssh support@172.16.10.15  
+  957  kubectl top nodes
+  958  kubectl get nodes -o wide
+  959  kubectl get nodes
+  960  kubectl get nodes -o wide
+  961  kubectl get nodes
+  962  kubectl get nodes -o wide
+  963  ssh suppoer@172.16.10.12
+  964  ssh suppoer@172.16.10.13
+  965  ssh suppoer@172.16.10.14
+  966  kubectl get nodes
+  967  kubectl get nodes -o wide
+  968  kubectl get cronjob -n ns-prx-1
+  969  kubectl get job -n ns-prx-1
+  970  kubectl delete job sync-keycloak-users-groups-27467190 -n ns-prx-1
+  971  kubectl delete job sync-keycloak-users-groups-27467490 -n ns-prx-1
+  972  kubectl get job -n ns-prx-1
+  973  kubectl get pods -n ns-prx-1
+  974  kubectl logs -f sync-keycloak-users-groups-27467430--1-j7hc7 -n ns-prx-1
+  975  kubectl get pods -n ns-prx-1
+  976  kubectl logs -f sync-keycloak-users-groups-27467430--1-j7hc7 -n ns-prx-1
+  977  kubectl get pods -n ns-prx-1
+  978  kubectl exec -it django-app-596b6c5fc5-jh4xv /bin/bash -n ns-prx-1
+  979  kubectl get pods -n ns-prx-1
+  980  kubectl get jobs -n ns-prx-1
+  981  kubectl get cronjobs -n ns-prx-1
+  982  kubectl get jobs -n ns-prx-1
+  983  kubectl get pods -n ns-prx-1
+  984  watch -n 1 "kubectl get pods -n ns-prx-1"
+  985  kubectl logs -f django-app-596b6c5fc5-6rjcq27467520--1-bjhp5 -n ns-prx-1
+  986  watch -n 1 "kubectl get pods -n ns-prx-1"
+  987  kubectl logs -f sync-keycloak-users-groups-27467520--1-bjhp5 -n ns-prx-1
+  988  kubectl get pods -n ns-prx-1
+  989  watch -n 1 "kubectl get pods -n ns-prx-1"
+  990  kubectl get nodes
+  991  kubectl get all
+  992  touch x
+  993  rm x
+  994  history
+  995  sudo su
+  996  exit
+  997  ls
+  998  ls -all 
+  999  mkdir fullwork 
+ 1000  sudo cp -rf atefwork/ certificate.pem cfmap-barwa.yaml dns.yaml get_helm.sh keycloakcluster.yaml keycloaknodeport.yaml kubernetes-ingress/ nfs-subdir-external-provisioner testwork/ fullwork/
+ 1001  cd fullwork/
+ 1002  ls
+ 1003  ls -all
+ 1004  du -sh .
+ 1005  cd ..
+ 1006  ls
+ 1007  du -sh kubespray/
+ 1008  mv kubespray/ fullwork/
+ 1009  ls -all fullwork/
+ 1010  history > history.txt 

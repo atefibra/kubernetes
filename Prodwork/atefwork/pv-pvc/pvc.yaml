@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: barwa-corp-be-dev
+  namespace: ns-prx-7
+spec:
+  storageClassName: nfs-client
+  resources:
+    requests:
+      storage: 5Gi
+  accessModes:
+    - ReadWriteMany

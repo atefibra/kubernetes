@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: rbprx1
+  namespace: ns-prx-1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: secret-reader
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: https://auth.proxym-group.net/auth/realms/proxym-group#ahmed.belghith

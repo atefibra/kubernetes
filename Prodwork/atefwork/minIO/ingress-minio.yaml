@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: minio
+ namespace: shared-apps
+spec:
+ ingressClassName: nginx-demo
+ rules:
+   - host: minio9.demo5.proxym-it.tn
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: minio-prx
+             port:
+               number: 9000
+

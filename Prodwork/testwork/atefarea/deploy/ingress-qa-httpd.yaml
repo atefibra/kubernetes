@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: httpd-qa
+  namespace: nginx-ingress
+spec:
+  rules:
+  - host: httpd.qa1.proxym-it.tn
+    http:
+      paths:
+      - backend:
+          service:
+            name: httpd-qa
+            port:
+              number: 80
+        pathType: ImplementationSpecific

@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{},"creationTimestamp":"2022-02-23T20:02:30Z","name":"secret-reader","resourceVersion":"13379611","uid":"f6f93784-39f5-4902-84e6-5c8eac2c6dd2"},"rules":[{"apiGroups":["","apps"],"resources":["pods","deployments","namespaces"],"verbs":["get","watch","list"]}]}
+  creationTimestamp: "2022-02-23T20:33:24Z"
+  name: secret-reader
+  resourceVersion: "13384021"
+  uid: 3925117c-29f7-4dd8-9f0b-747fbab9f628
+rules:
+- apiGroups:
+  - ""
+  - apps
+  resources:
+  - pods
+  - deployments
+  - namespaces
+  verbs:
+  - get
+  - watch
+  - list

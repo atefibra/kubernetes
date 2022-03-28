@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: mouadh-test
+ namespace: ingress-nginx
+spec:
+ ingressClassName: nginx-demo
+ rules:
+   - host: mouadh.demo5.proxym-it.tn
+     http:
+       paths:
+       - path: /
+         pathType: Prefix
+         backend:
+           service:
+             name: mouadh-nginx
+             port:
+               number: 80
+
+

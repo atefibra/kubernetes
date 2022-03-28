@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: nginx-demo
+ annotations:
+   nginx.ingress.kubernetes.io/rewrite-target: /
+   kubernetes.io/ingress.class: "nginx-demo"
+spec:
+ rules:
+ - host: nginx.demo3.proxym-it.tn
+   http:
+     paths:
+      - backend:
+         service:
+           name: nginx-deploy-main
+           port:
+             number: 80
+        pathType: ImplementationSpecific
